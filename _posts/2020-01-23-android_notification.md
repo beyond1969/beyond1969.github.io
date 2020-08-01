@@ -1,7 +1,8 @@
 ---
 title: "[Android] Android Notification"
 date: 2020-01-23
-categories: Android, Java
+categories: Android
+tags: Android Java
 ---
 # 안드로이드 Notification
 
