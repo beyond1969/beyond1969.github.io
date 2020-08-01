@@ -180,7 +180,7 @@ FrameLayout을 상속받아 커스텀뷰를 만들때 생성자의 형태이다.
 
 # @JvmOverloads
 
-[Kotlin 공식 문서][https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/]
+[Kotlin 공식 문서](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/)
 
 해당 어노테이션을 선언해주면 Kotlin 컴파일러에게 해당 함수가 기본값을 가지는 인자를 포함한 여러개의 오버로드 함수를 만들것을 알리게 된다.
 
