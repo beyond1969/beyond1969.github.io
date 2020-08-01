@@ -1,7 +1,8 @@
 ---
 title: "[Android] 생성자와 @JvmOverload 어노테이션"
 date: 2020-08-01
-categories: Android, Kotlin
+categories: Android
+tags: Android Kotlin
 ---
 
 # 개요
