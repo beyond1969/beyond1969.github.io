@@ -10,6 +10,15 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+
+const postsByCategory = posts.reduce((acc, post) => {
+	const category = post.id.includes('/') ? post.id.split('/')[0] : '기본';
+	if (!acc[category]) acc[category] = [];
+	acc[category].push(post);
+	return acc;
+}, {} as Record<string, typeof posts>);
+
+const categories = Object.keys(postsByCategory).sort();
 ---
 
 <!doctype html>
@@ -19,6 +28,17 @@ const posts = (await getCollection('blog')).sort(
 		<style>
 			main {
 				width: 960px;
+			}
+			.category-section {
+				margin-bottom: 4em;
+			}
+			.category-title {
+				border-left: 4px solid var(--accent);
+				padding-left: 0.5em;
+				margin-bottom: 1.5em;
+				color: var(--accent);
+				text-transform: uppercase;
+				letter-spacing: 1px;
 			}
 			ul {
 				display: flex;
@@ -35,17 +55,6 @@ const posts = (await getCollection('blog')).sort(
 				text-decoration: none;
 				transition: 0.2s ease;
 			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
-			}
 			ul li img {
 				margin-bottom: 0.5rem;
 				border-radius: 12px;
@@ -56,7 +65,8 @@ const posts = (await getCollection('blog')).sort(
 			.title {
 				margin: 0;
 				color: rgb(var(--black));
-				line-height: 1;
+				line-height: 1.2;
+				font-size: 1.5rem;
 			}
 			.date {
 				margin: 0;
@@ -71,17 +81,11 @@ const posts = (await getCollection('blog')).sort(
 			}
 			@media (max-width: 720px) {
 				ul {
-					gap: 0.5em;
+					gap: 1em;
 				}
 				ul li {
 					width: 100%;
 					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
 				}
 			}
 		</style>
@@ -89,25 +93,28 @@ const posts = (await getCollection('blog')).sort(
 	<body>
 		<Header />
 		<main>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.id}/`}>
-									{post.data.heroImage && (
-										<Image width={720} height={360} src={post.data.heroImage} alt="" />
-									)}
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
-								</a>
-							</li>
-						))
-					}
-				</ul>
-			</section>
+			{
+				categories.map((category) => (
+					<section class="category-section">
+						<h2 class="category-title">📂 {category}</h2>
+						<ul>
+							{postsByCategory[category].map((post) => (
+								<li>
+									<a href={`/blog/${post.id}/`}>
+										{post.data.heroImage && (
+											<Image width={720} height={360} src={post.data.heroImage} alt="" />
+										)}
+										<h4 class="title">{post.data.title}</h4>
+										<p class="date">
+											<FormattedDate date={post.data.pubDate} />
+										</p>
+									</a>
+								</li>
+							))}
+						</ul>
+					</section>
+				))
+			}
 		</main>
 		<Footer />
 	</body>
