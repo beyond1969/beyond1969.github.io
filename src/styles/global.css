@@ -5,16 +5,17 @@
  */
 
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
+	--accent: #a3bfff;
+	--accent-dark: #7b9cff;
+	--black: 220, 220, 220;
+	--gray: 160, 160, 170;
+	--gray-light: 40, 42, 54;
+	--gray-dark: 200, 204, 210;
+	--gray-gradient: rgba(15, 18, 25, 1), #111;
 	--box-shadow:
-		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
+		0 2px 6px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.5),
+		0 16px 32px rgba(0, 0, 0, 0.5);
+	background-color: #0f1219;
 }
 body {
 	font-family: var(--font-atkinson);

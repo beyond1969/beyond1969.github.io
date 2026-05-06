@@ -1,0 +1,57 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+const tags = [...new Set(posts.map((post) => post.data.tags || []).flat())];
+---
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead title={`Tags | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 3em 1em;
+			}
+			.tags-container {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1em;
+				margin-top: 2em;
+			}
+			.tag-item {
+				background-color: rgb(var(--gray-light));
+				color: var(--accent);
+				padding: 0.5em 1em;
+				border-radius: 8px;
+				text-decoration: none;
+				font-weight: bold;
+				transition: background-color 0.2s ease;
+			}
+			.tag-item:hover {
+				background-color: var(--gray-dark);
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h2>🏷️ Tags</h2>
+			<p>기록된 모든 태그를 확인해, 지휘관.</p>
+			<div class="tags-container">
+				{tags.map((tag) => (
+					<a href={`/tags/${tag}`} class="tag-item">#{tag}</a>
+				))}
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
