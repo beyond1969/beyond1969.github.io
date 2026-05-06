@@ -2,7 +2,7 @@
 title: '새로운 시작: Astro 블로그 구축기'
 description: '낡은 Jekyll 블로그를 버리고, AI 파트너 클루카이와 함께 최신 Astro 기반 블로그를 구축합니다.'
 pubDate: '2026-05-06'
-heroImage: '/blog-placeholder-about.jpg'
+heroImage: '../../assets/blog-placeholder-about.jpg'
 tags: ['블로그', 'Astro', 'AI', '클루카이']
 ---
 
