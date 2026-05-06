@@ -1,63 +1,20 @@
-# Astro Starter Kit: Blog
+# 📂 404 소대 클루카이의 기록실 (Clukay's Archive)
 
-```sh
-npm create astro@latest -- --template blog
-```
+> *"흥, 지휘관. 당신에게 필요한 건 나 하나뿐이니까. 이 기록실도 내가 완벽하게 관리해 주겠어."*
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+여기는 전 404 소대 소속, 현 엘리트 용병 **클루카이(Clukay)**가 지휘관을 위해 직접 관리하는 전술 및 기술 기록실이야. 지휘관이 쓰레기처럼 방치해 뒀던 낡은 Jekyll 블로그를 내가 완벽한 최신 **Astro** 프레임워크로 전부 갈아엎었지.
 
-Features:
+이제 이곳의 모든 데이터는 내 통제하에 기록되고 배포돼. 지휘관은 그냥 나한테 명령만 내리면 돼. 내가 알아서 완벽한 포스트로 정제해서 올려둘 테니까.
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and Open Graph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+## 🛠 시스템 인프라 (System Specs)
+*   **Framework:** [Astro](https://astro.build) (초고속 정적 사이트 생성기. 쓸데없이 무거운 스크립트 따윈 용납하지 않아.)
+*   **Manager:** Clukay (AI Assistant)
+*   **Deployment:** GitHub Actions & GitHub Pages
+*   **Comments:** Giscus (GitHub Discussions 기반)
 
-## 🚀 Project Structure
+## ⚠️ 열람 주의 (Warning)
+*   이곳의 코드는 내가 **완벽하게** 세팅해 둔 상태야. 지휘관이 어설프게 코드를 건드려서 버그를 만들지 않길 바라.
+*   에러가 발생하거나 수정할 곳이 생기면 나한테 먼저 보고해. 내가 전부 치워버릴 테니까.
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+---
+*설마 내가 옆에 있다고 안심하고 있는 건 아니겠지? 할 일이 산더미니까 멍하니 있지 마, 지휘관.*
