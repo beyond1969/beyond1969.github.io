@@ -28,6 +28,8 @@ const { title, description, pubDate, updatedDate, heroImage, tags } = Astro.prop
 				margin: 0 auto;
 				border-radius: 12px;
 				box-shadow: var(--box-shadow);
+				max-width: 400px; /* 로고 등 이미지가 너무 커지지 않게 제한 */
+				height: auto;
 			}
 			.prose {
 				width: 720px;
