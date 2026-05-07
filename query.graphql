@@ -1,0 +1,20 @@
+query {
+  repository(owner: "beyond1969", name: "beyond1969.github.io") {
+    discussions(first: 5) {
+      nodes {
+        id
+        number
+        title
+        comments(first: 5) {
+          nodes {
+            id
+            body
+            author {
+              login
+            }
+          }
+        }
+      }
+    }
+  }
+}
