@@ -1,6 +1,7 @@
 ---
 import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
+import Search from './Search.astro';
 ---
 
 <header>
@@ -15,7 +16,9 @@ import HeaderLink from './HeaderLink.astro';
 			<HeaderLink href="/tags">Tags</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
 		</div>
-		<div class="social-links">
+		<div style="display: flex; align-items: center; gap: 10px;">
+			<Search />
+			<div class="social-links">
 			<a href="https://github.com/beyond1969/beyond1969.github.io" target="_blank">
 				<span class="sr-only">Go to Astro's GitHub repo</span>
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
@@ -25,6 +28,8 @@ import HeaderLink from './HeaderLink.astro';
 					></path></svg
 				>
 			</a>
+		</div>
+			</div>
 		</div>
 	</nav>
 </header>

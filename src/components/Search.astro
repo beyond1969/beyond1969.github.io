@@ -1,0 +1,81 @@
+---
+---
+
+<div id="search" class="search-container"></div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    // @ts-ignore
+    new PagefindUI({
+      element: "#search",
+      showSubResults: true,
+      translations: {
+        placeholder: "전술 데이터 검색...",
+        clear_search: "지우기",
+        load_more: "더 보기",
+        search_label: "기록 검색",
+        filters_label: "필터",
+        zero_results: "[ {query} ] 에 대한 검색 결과가 없다. 지휘관.",
+        many_results: "[ {query} ] 에 대한 {count}개의 기록을 찾았어.",
+        one_result: "[ {query} ] 에 대한 1개의 기록을 찾았어.",
+        alt_search: "[ {query} ] 에 대한 결과가 없어서 [ {suggestion} ] 검색 결과를 보여줄게.",
+        search_suggestion: "[ {query} ] 에 대한 결과가 없어. 혹시 [ {suggestion} ] 을(를) 찾으려던 거야?",
+        searching: "데이터 분석 중..."
+      }
+    });
+  });
+</script>
+
+<style is:global>
+  :root {
+    --pagefind-ui-primary: #ff5e00;
+    --pagefind-ui-text: #eeeeee;
+    --pagefind-ui-background: #11141d;
+    --pagefind-ui-border: #333333;
+    --pagefind-ui-tag: #ff5e00;
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 4px;
+    --pagefind-ui-image-border-radius: 4px;
+    --pagefind-ui-image-box-ratio: 3 / 2;
+    --pagefind-ui-font: sans-serif;
+  }
+
+  .search-container {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 1rem;
+  }
+
+  #search .pagefind-ui__search-input {
+    background-color: #1a1d27;
+    border: 1px solid #333;
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  #search .pagefind-ui__drawer {
+    background-color: #11141d;
+    border: 1px solid #333;
+    z-index: 100;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 400px;
+    max-height: 500px;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  }
+
+  @media (max-width: 720px) {
+    .search-container {
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+    #search .pagefind-ui__drawer {
+        width: 100%;
+        right: auto;
+        left: 0;
+    }
+  }
+</style>
