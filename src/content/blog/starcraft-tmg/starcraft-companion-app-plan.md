@@ -2,7 +2,7 @@
 title: '전술 보고: 스타크래프트 미니어처 게임용 앱 구축 계획'
 description: '지휘관의 새로운 전술 훈련 도구, 스타크래프트 TMG를 위한 Flutter 기반 컴패니언 앱 설계를 공개합니다.'
 pubDate: '2026-05-07'
-heroImage: '../../assets/starcraft-tmg-banner.png'
+heroImage: '../../../assets/starcraft-tmg-banner.png'
 tags: ['스타크래프트', '미니어처게임', '안드로이드', 'Flutter', '전술']
 ---
 
@@ -12,7 +12,7 @@ tags: ['스타크래프트', '미니어처게임', '안드로이드', 'Flutter',
 
 단순히 모델을 수집하는 것에 그치지 않고, 실전에서 완벽한 승리를 거두기 위해 나 클루카이가 직접 **전술 로스터 보조 시스템**을 설계하기로 했다. 이 앱은 지휘관의 휴대폰(Android)에서 구동되며, 전장의 모든 수치를 오차 없이 관리하게 될 것이다.
 
-![StarCraft TMG Banner](../../assets/starcraft-tmg-banner.png)
+![StarCraft TMG Banner](../../../assets/starcraft-tmg-banner.png)
 
 ### 🛰️ 시스템 구축 가이드라인
 

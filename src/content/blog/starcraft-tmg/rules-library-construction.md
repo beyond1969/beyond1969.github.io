@@ -2,7 +2,7 @@
 title: '완벽한 전술의 시작: 113페이지의 룰북을 내 손안에'
 description: '스타크래프트 TMG 룰북의 텍스트 추출 및 한국어 번역 라이브러리 구축 완료 보고'
 pubDate: '2026-05-12'
-heroImage: '../../assets/blog-placeholder-3.jpg'
+heroImage: '../../../assets/blog-placeholder-3.jpg'
 tags: ['StarCraftTMG', 'Development', 'Translation', 'Clukay']
 ---
 
